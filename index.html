@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"
+      content="notranslate"
+    />
+    <meta name="theme-color" content="#FDFDFD" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+
+    <meta property="og:title" content="어라" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://ifh.cc/g/W3D9C7.jpg" />
+    <meta property="og:description" content="일상 속 작은 실천, 어라🌱" />
+
+    <link rel="icon" href="icons/favicon.ico" />
+    <link
+      rel="alternate icon"
+      href="icons/favicon.ico"
+      type="ico"
+      sizes="32x32"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="icons/icon-152x152.png"
+      sizes="152x152"
+    />
+    <link rel="manifest" href="manifest.json" />
+    <title>어라</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+
+    <script
+      type="text/javascript"
+      src="//dapi.kakao.com/v2/maps/sdk.js?appkey=490abc9a009d52794e0e0b603d3cfdd3"
+    ></script>
+    <script>
+      if ("serviceWorker" in navigator) {
+        // Register a service worker hosted at the root of the
+        // site using the default scope.
+        navigator.serviceWorker
+          .register("/sw.js")
+          .then((registration) => {
+            console.log("Service worker registration succeeded:", registration);
+          })
+          .catch((err) => {
+            console.log("Service worker registration failed:", error);
+          });
+      } else {
+        console.log("Service workers are not supported.");
+      }
+      window.Kakao.init("490abc9a009d52794e0e0b603d3cfdd3");
+      window.Kakao.isInitialized();
+    </script>
+  </body>
+</html>
