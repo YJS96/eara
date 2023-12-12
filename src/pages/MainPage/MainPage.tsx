@@ -96,12 +96,13 @@ export default function MainPage() {
 
   const weekDates = getWeekDates();
 
+  const lottieList = [WowEarth, ChuEarth, MeltingEarth, CryEarth, AngryEarth];
+  
+  
   var nickname = localStorage.getItem("newNickname") || "환경구해";
   // if (nickname === "") {
   //   nickname = "환경구해"
   // }
-
-  const lottieList = [WowEarth, ChuEarth, MeltingEarth, CryEarth, AngryEarth];
 
   const userInfo: UserInfoProps = {
     member_id: 1,

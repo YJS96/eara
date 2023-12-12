@@ -8,7 +8,7 @@ import { ShadowBox } from "../../components/ShadowBox/ShadowBox";
 import { ReactComponent as Connected } from "../../assets/icons/connected-icon.svg";
 import CompanyDetail from "../../components/Modal/CompanyDetail";
 import CompanyList from "../../common/act.json";
-import axiosInstance from "../../api/axiosInstance";
+// import axiosInstance from "../../api/axiosInstance";
 
 interface CategoryProps {
   isSelected: boolean;
@@ -18,18 +18,55 @@ interface CompanyConnectProps {
   id: number;
   name: string;
   is_connect: boolean;
-  policies: string;
 }
 
 export default function CompanyPage() {
   const [selectedCategoryIndex, setSelectedCategoryIndex] = useState<number>(0);
   const [modalOpen, setModalOpen] = useState<boolean>(false);
   const [selectedCompany, setSelectedCompany] = useState<number>(0);
-  const [company_list, setCompanyList] = useState<CompanyConnectProps[] | null>(
-    null
-  );
+  // const [company_list, setCompanyList] = useState<CompanyConnectProps[] | null>(
+  //   null
+  // );
 
-  const axios = axiosInstance();
+  const company_list: CompanyConnectProps[] = [
+    {
+      id: 1,
+      name: "ABC 마트",
+      is_connect: true,
+    },
+    {
+      id: 2,
+      name: "메가커피",
+      is_connect: false,
+    },
+    {
+      id: 3,
+      name: "더벤티",
+      is_connect: true,
+    },
+    {
+      id: 4,
+      name: "이디야",
+      is_connect: false,
+    },
+    {
+      id: 4,
+      name: "이디야",
+      is_connect: true,
+    },
+    {
+      id: 4,
+      name: "이디야",
+      is_connect: true,
+    },
+    {
+      id: 4,
+      name: "이디야",
+      is_connect: true,
+    },
+  ];
+
+  // const axios = axiosInstance();
 
   const showModal = (index: number) => {
     setSelectedCompany(index);
@@ -78,15 +115,15 @@ export default function CompanyPage() {
   ).sort((a, b) => a.name.localeCompare(b.name, "en"));
 
   const getCompanyConnected = async () => {
-    try {
-      const response = await axios.get(
-        `/cpoint/company?category=${categoryInEnglish[selectedCategoryIndex]}`
-      );
-      const data = await response.data.company_list;
-      setCompanyList(data);
-    } catch (error) {
-      console.log(error);
-    }
+    // try {
+    //   const response = await axios.get(
+    //     `/cpoint/company?category=${categoryInEnglish[selectedCategoryIndex]}`
+    //   );
+    //   const data = await response.data.company_list;
+    //   setCompanyList(data);
+    // } catch (error) {
+    //   console.log(error);
+    // }
   };
 
   useEffect(() => {

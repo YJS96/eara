@@ -5,7 +5,7 @@ import MainFrame from "../../components/MainFrame/MainFrame";
 import { ReactComponent as PigCoin } from "../../assets/icons/pig-coin.svg";
 import { ShadowBox } from "../../components/ShadowBox/ShadowBox";
 import { useNavigate } from "react-router-dom";
-import axiosInstance from "../../api/axiosInstance";
+// import axiosInstance from "../../api/axiosInstance";
 
 import { ResponsivePie } from "@nivo/pie";
 
@@ -17,6 +17,7 @@ interface UserInfoProps {
   bill_count: number;
   profile_image_url: string;
   is_test_done: boolean;
+  repay_groo: number;
 }
 
 interface SummaryProps {
@@ -26,50 +27,91 @@ interface SummaryProps {
 
 export default function NtzPage() {
   const [charSort, setChartSort] = useState(false);
-  const [userInfo, setUserInfo] = useState<UserInfoProps | null>(null);
-  const [userCpoint, setUserCpoint] = useState<number>(0);
-  const [summary_list, setSummaryList] = useState<SummaryProps[]>([]);
+  // const [userInfo, setUserInfo] = useState<UserInfoProps | null>(null);
+  // const [userCpoint, setUserCpoint] = useState<number>(0);
+  // const [summary_list, setSummaryList] = useState<SummaryProps[]>([]);
   // const [summary_list, setSummaryList] = useState([
   //   { activity_type: "TUMBLER", point: 1 },
   //   { activity_type: "ELECTRONIC_RECEIPT", point: 2 },
   // ]);
-  const axios = axiosInstance();
+  // const axios = axiosInstance();
 
+  var nickname = localStorage.getItem("newNickname") || "환경구해";
+  // if (nickname === "") {
+  //   nickname = "환경구해"
+  // }
+  const grooInit =
+    Number(JSON.parse(localStorage.getItem("testGroo") || "0")) * 1000;
+  const userCpoint = 6700;
+  const userInfo: UserInfoProps = {
+    member_id: 1,
+    nickname: nickname,
+    groo: grooInit / 2,
+    bill: 3200,
+    bill_count: 4,
+    profile_image_url:
+      "https://github.com/YJS96/eara_test_repo/blob/main/public/images/logo-nobackground.png?raw=true",
+    is_test_done: true,
+    repay_groo: 400,
+  };
+
+  const summary_list: SummaryProps[] = [
+    {
+      activity_type: "ELECTRONIC_RECEIPT",
+      point: 2000,
+    },
+    {
+      activity_type: "ECO_FRIENDLY_PRODUCTS",
+      point: 500,
+    },
+    {
+      activity_type: "MULTI_USE_CONTAINER",
+      point: 800,
+    },
+    {
+      activity_type: "TUMBLER",
+      point: 2400,
+    },
+    {
+      activity_type: "EMISSION_FREE_CAR",
+      point: 1000,
+    },
+  ];
   useEffect(() => {
     const timer = setTimeout(() => {
       setChartSort(true);
-    }, 280);
+    }, 340);
     return () => clearTimeout(timer);
   }, []);
 
   const getUserInfo = async () => {
-    try {
-      const response = await axios.get(`/member/detail`);
-      const data = await response.data;
-      setUserInfo(data);
-    } catch (error) {
-      console.log(error);
-    }
+    // try {
+    //   const response = await axios.get(`/member/detail`);
+    //   const data = await response.data;
+    //   setUserInfo(data);
+    // } catch (error) {
+    //   console.log(error);
+    // }
   };
 
   const getCpoint = async () => {
-    try {
-      const response = await axios.get(`/cpoint`);
-      const data = await response.data;
-      setUserCpoint(data.cpoint);
-    } catch (error) {
-      console.log(error);
-    }
+    // try {
+    //   const response = await axios.get(`/cpoint`);
+    //   const data = await response.data;
+    //   setUserCpoint(data.cpoint);
+    // } catch (error) {
+    //   console.log(error);
+    // }
   };
 
   const getSummary = async () => {
-    try {
-      const response = await axios.get(`/cpoint/summary`);
-      const data = await response.data.summary_list;
-      setSummaryList(data);
-    } catch (error) {
-      console.log(error);
-    }
+    // try {
+    //   const response = await axios.get(`/cpoint/summary`);
+    //   const data = await response.data.summary_list;
+    //   setSummaryList(data);
+    // } catch (error) {
+    //   console.log(error);
+    // }
   };
 
   useEffect(() => {

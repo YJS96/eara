@@ -101,7 +101,7 @@ export default function MyPage() {
   });
 
   const handleNoti = () => {
-    // initFcm();
+    initFcm();
   };
 
   const getUserInfo = async () => {
