@@ -1,0 +1,62 @@
+[
+  {
+    "type": "ELECTRONIC_RECEIPT",
+    "typeInKorean": "전자영수증 발급",
+    "groo": 135,
+    "ntzPoint": 100
+  },
+  {
+    "type": "TUMBLER",
+    "typeInKorean": "텀블러 이용",
+    "groo": 410,
+    "ntzPoint": 300
+  },
+  {
+    "type": "DISPOSABLE_CUP",
+    "typeInKorean": "일회용컵 반환",
+    "groo": 275,
+    "ntzPoint": 200
+  },
+  {
+    "type": "REFILL_STATION",
+    "typeInKorean": "리필스테이션 이용",
+    "groo": 2700,
+    "ntzPoint": 2000
+  },
+  {
+    "type": "MULTI_USE_CONTAINER",
+    "typeInKorean": "다회용기 이용",
+    "groo": 1370,
+    "ntzPoint": 1000
+  },
+  {
+    "type": "HIGH_QUALITY_RECYCLED_PRODUCTS",
+    "typeInKorean": "고품질 재활용품 배출",
+    "groo": 315,
+    "ntzPoint": 300
+  },
+  {
+    "type": "ECO_FRIENDLY_PRODUCTS",
+    "typeInKorean": "친환경제품 구매",
+    "groo": 1370,
+    "ntzPoint": 1000
+  },
+  {
+    "type": "EMISSION_FREE_CAR",
+    "typeInKorean": "무공해차 대여",
+    "groo": 685,
+    "ntzPoint": 500
+  },
+  {
+    "type": "DISCARDED_PHONE",
+    "typeInKorean": "폐휴대폰 반납",
+    "groo": 1370,
+    "ntzPoint": 1000
+  },
+  {
+    "type": "ETC",
+    "typeInKorean": "환경 보호 활동",
+    "groo": 150,
+    "ntzPoint": 0
+  }
+]

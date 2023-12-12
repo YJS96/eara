@@ -1,0 +1,47 @@
+[
+  {
+    "type": "PLASTIC",
+    "content": "일회용품 사용",
+    "example": "카페 일회용컵, 비닐봉지, 배달 용기 등 불필요한 일회용품 사용",
+    "imgUrl": "/images/template1.png",
+    "fine": 250
+  },
+  {
+    "type": "PAPER",
+    "content": "종이 낭비",
+    "example": "종이 영수증을 받거나 휴지를 과도하게 사용하는 등 종이를 낭비",
+    "imgUrl": "/images/template2.png",
+    "fine": 150
+  },
+  {
+    "type": "ELECTRICITY",
+    "content": "전기 낭비",
+    "example":
+      "플러그 안뽑기, 빈 방에 불 켜놓기, 반팔입고 히터 사용 등 과도한 전기 사용",
+    "imgUrl": "/images/template3.png",
+    "fine": 350
+  },
+  {
+    "type": "WATER",
+    "content": "물 낭비",
+    "example":
+      "양치 컵 미사용, 물 틀어놓고 설거지, 세탁 나눠서 하기 등 물 절약 비실천",
+    "imgUrl": "/images/template4.png",
+    "fine": 400
+  },
+  {
+    "type": "FOOD",
+    "content": "식재료 낭비",
+    "example":
+      "먹을만큼 음식을 구매하지 않는 행위 등으로 많은 음식물 쓰레기를 배출",
+    "imgUrl": "/images/template5.png",
+    "fine": 300
+  },
+  {
+    "type": "OTHER",
+    "content": "기타",
+    "example": "이외 분리수거를 안하거나, 물티슈 사용 등 환경 오염 활동",
+    "imgUrl": "/images/template6.png",
+    "fine": 200
+  }
+]

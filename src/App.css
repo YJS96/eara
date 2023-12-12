@@ -1,28 +1,27 @@
-@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
 
 * {
   font-family: Pretendard !important;
-  --primary: #56B984;
-  --secondary: #81DEAD;
-  --third: #D6E8DB;
-  --black: #1C1C1C;
+  --primary: #56b984;
+  --secondary: #81dead;
+  --third: #d6e8db;
+  --black: #1c1c1c;
   --dark-gray: #727272;
-  --nav-gray: #AFAFAF;
-  --gray: #ECECEC;
-  --background: #F6F7F6;
-  --white: #FDFDFD;
-  --red: #F47373;
-  --blue: #4A88E5;
-  --yellow: #FEE227;
-  --kakao-black: #351C1B;
-  --kakao-yellow: #F9DD4A;
-
-  color: var(--black)
+  --nav-gray: #afafaf;
+  --gray: #ececec;
+  --background: #f6f7f6;
+  --white: #fdfdfd;
+  --red: #f47373;
+  --blue: #4a88e5;
+  --yellow: #fee227;
+  --kakao-black: #351c1b;
+  --kakao-yellow: #f9dd4a;
 }
 
 #root {
   /* PC */
   width: 100dvw;
+  min-width: 300px;
   max-width: 544px;
   height: 100dvh;
   padding-top: env(safe-area-inset-top);
@@ -34,7 +33,6 @@
   /* Android */
   /* width: 360px;
   height: 800px; */
-
 
   position: absolute;
   top: 50%;
