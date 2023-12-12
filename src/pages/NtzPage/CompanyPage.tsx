@@ -89,17 +89,17 @@ export default function CompanyPage() {
     "폐휴대폰",
   ];
 
-  const categoryInEnglish = [
-    "ELECTRONIC_RECEIPT",
-    "TUMBLER",
-    "DISPOSABLE_CUP",
-    "REFILL_STATION",
-    "MULTI_USE_CONTAINER",
-    "HIGH_QUALITY_RECYCLED_PRODUCTS",
-    "ECO_FRIENDLY_PRODUCTS",
-    "EMISSION_FREE_CAR",
-    "DISCARDED_PHONE",
-  ];
+  // const categoryInEnglish = [
+  //   "ELECTRONIC_RECEIPT",
+  //   "TUMBLER",
+  //   "DISPOSABLE_CUP",
+  //   "REFILL_STATION",
+  //   "MULTI_USE_CONTAINER",
+  //   "HIGH_QUALITY_RECYCLED_PRODUCTS",
+  //   "ECO_FRIENDLY_PRODUCTS",
+  //   "EMISSION_FREE_CAR",
+  //   "DISCARDED_PHONE",
+  // ];
 
   const handleCategoryClick = (index: number) => {
     if (selectedCategoryIndex === index) {
